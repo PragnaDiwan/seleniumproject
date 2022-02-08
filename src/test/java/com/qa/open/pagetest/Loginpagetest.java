@@ -39,6 +39,8 @@ public class Loginpagetest extends Basetest {
 	@Test(priority=5)
 	public void Logintest()
 	{
-		loginpage.dologin(prop.getProperty("username").trim(),prop.getProperty("password").trim());
+		accountpage=loginpage.dologin(prop.getProperty("username").trim(),prop.getProperty("password").trim());
+		
+		Assert.assertEquals(accountpage.getaccountapagettile(), Constants.ACCOUNT_PAGE_TITLE);
 	}
 }

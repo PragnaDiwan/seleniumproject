@@ -74,9 +74,14 @@ public class ElementUtil {
 	}
 
 	public void doSendKeys(By locator, String value) {
+		doclear(locator);
 		getElement(locator).sendKeys(value);
 	}
 
+	public void doclear(By locator)
+	{
+		getElement(locator).clear();
+	}
 	public void doSendKeys(String locatorType, String locatorValue, String value) {
 		getElement(locatorType, locatorValue).sendKeys(value);
 	}
